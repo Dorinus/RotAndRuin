@@ -9,9 +9,9 @@ public class Zombie : MonoBehaviour
 
     public NavMeshAgent agent;
     public Animator animator;
-    public  float attackRange  = 1.5f;
+    public  float attackRange  = 1.2f;
     public float movementSpeed = 5.0f;
-    public int rotationSpeed = 120;
+    public int rotationSpeed = 200;
 
     private bool isDead = false;
     private bool isDeathAnimationPlaying = false;
@@ -79,17 +79,17 @@ public class Zombie : MonoBehaviour
         // agent.enabled = false;
     }
 
-    public void activateZombieAttack()
-    {
-        Debug.Log("Activated!");
-        hand_R.GetComponent<Collider>().enabled = true;
-    }
-    
-    public void deactivateZombieAttack()
-    {
-        Debug.Log("Deactivated!");
-        hand_R.GetComponent<Collider>().enabled = false;
-    }
+    // public void activateZombieAttack()
+    // {
+    //     Debug.Log("Activated!");
+    //     hand_R.GetComponent<Collider>().enabled = true;
+    // }
+    //
+    // public void deactivateZombieAttack()
+    // {
+    //     Debug.Log("Deactivated!");
+    //     hand_R.GetComponent<Collider>().enabled = false;
+    // }
 
 
 }
