@@ -6,20 +6,19 @@ using UnityEngine.AI;
 
 public class Zombie : MonoBehaviour
 {
-
-    public NavMeshAgent agent;
-    public Animator animator;
-    public  float attackRange  = 1.5f;
-    public float movementSpeed = 5.0f;
-    public int rotationSpeed = 120;
-
-    private bool isDead = false;
-    private bool isDeathAnimationPlaying = false;
-    private GameObject _target;
+    [SerializeField] public NavMeshAgent agent;
+    [SerializeField] public Animator animator;
+    [SerializeField] private float attackRange = 1.2f;
+    [SerializeField] private float movementSpeed = 5.0f;
+    [SerializeField] private int rotationSpeed = 200;
     
     
-    //test
-    public GameObject hand_R;
+
+    [SerializeField] private bool isDead = false;
+    [SerializeField] private bool isDeathAnimationPlaying = false;
+    [SerializeField] private GameObject _target;
+
+    [SerializeField] public GameObject hand_R;
 
     private void Awake()
     {
@@ -28,16 +27,15 @@ public class Zombie : MonoBehaviour
             GetComponent<Zombie_Health>().onDie += HandleDeath;
         }
     }
-    
+
     void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player");
         agent.updatePosition = false;
         agent.speed = movementSpeed;
         agent.angularSpeed = rotationSpeed;
-        
-        StartCoroutine(MoveToTarget());
 
+        StartCoroutine(MoveToTarget());
     }
 
 
@@ -45,7 +43,7 @@ public class Zombie : MonoBehaviour
     {
         while (!isDead)
         {
-            bool shouldMove = !animator.GetBool("isDying") && 
+            bool shouldMove = !animator.GetBool("isDying") &&
                               Vector3.Distance(transform.position, _target.transform.position) > attackRange;
 
             animator.SetBool("isMoving", shouldMove);
@@ -57,19 +55,19 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    
+
     private void OnAnimatorMove()
     {
         if (isDeathAnimationPlaying)
         {
-             transform.position = animator.rootPosition;
+            transform.position = animator.rootPosition;
         }
         else
         {
             transform.position = agent.nextPosition;
         }
     }
-    
+
     private void HandleDeath()
     {
         isDead = true;
@@ -77,19 +75,28 @@ public class Zombie : MonoBehaviour
         animator.SetBool("isDying", true);
         agent.updateRotation = false;
         // agent.enabled = false;
+        StartCoroutine(DestroyAfterDelay(3f));
     }
 
-    public void activateZombieAttack()
+    private IEnumerator DestroyAfterDelay(float delay)
     {
-        Debug.Log("Activated!");
-        hand_R.GetComponent<Collider>().enabled = true;
-    }
-    
-    public void deactivateZombieAttack()
-    {
-        Debug.Log("Deactivated!");
-        hand_R.GetComponent<Collider>().enabled = false;
-    }
+        
+        yield return new WaitForSeconds(3);
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = startPosition - new Vector3(0f, 0.5f, 0f);
 
+        float elapsedTime = 0f;
+        float duration = 3f;
+
+        while (elapsedTime < duration)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = targetPosition;
+        Destroy(gameObject);
+    }
 
 }

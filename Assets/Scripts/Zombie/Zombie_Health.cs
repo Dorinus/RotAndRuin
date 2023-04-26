@@ -12,7 +12,6 @@ public class Zombie_Health : MonoBehaviour
     private int health;
 
     public event Action onDie = delegate {};
-    // Start is called before the first frame update
 
     private void Awake()
     {
@@ -31,17 +30,6 @@ public class Zombie_Health : MonoBehaviour
             }
         
     }
-
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     Debug.Log("Collision detected!");
-    //
-    //     var bullet = collision.collider.GetComponent<Bullet>();
-    //     if (bullet != null)
-    //     {
-    //         TakeDamage(bullet.Damage);
-    //     }
-    // }
 
 
     private void TakeDamage(int damage)
