@@ -11,6 +11,8 @@ public class Zombie : MonoBehaviour
     [SerializeField] private float attackRange = 1.2f;
     [SerializeField] private float movementSpeed = 5.0f;
     [SerializeField] private int rotationSpeed = 200;
+    
+    
 
     [SerializeField] private bool isDead = false;
     [SerializeField] private bool isDeathAnimationPlaying = false;
