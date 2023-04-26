@@ -77,19 +77,15 @@ public class Zombie : MonoBehaviour
         animator.SetBool("isDying", true);
         agent.updateRotation = false;
         // agent.enabled = false;
+        StartCoroutine(DestroyAfterDelay(3f));
     }
 
-    // public void activateZombieAttack()
-    // {
-    //     Debug.Log("Activated!");
-    //     hand_R.GetComponent<Collider>().enabled = true;
-    // }
-    //
-    // public void deactivateZombieAttack()
-    // {
-    //     Debug.Log("Deactivated!");
-    //     hand_R.GetComponent<Collider>().enabled = false;
-    // }
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        
+        yield return new WaitForSeconds(delay);
+       
+    }
 
 
 }

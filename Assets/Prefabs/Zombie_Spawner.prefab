@@ -99,3 +99,6 @@ MonoBehaviour:
   spawnDelay: 10
   maxEnemies: 10
   animatorController: {fileID: 9100000, guid: 8669d4491d1b62e4dbf39723b8436b12, type: 2}
+  moveSound: {fileID: 8300000, guid: e39a3a117ceeaa04896af315b91795f9, type: 3}
+  deathSound: {fileID: 8300000, guid: ba13971c8711a3743b0e422619e547a1, type: 3}
+  attackSound: {fileID: 8300000, guid: 233333d8a436f7c41851b5ffba2e394d, type: 3}

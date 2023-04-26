@@ -13,6 +13,12 @@ public class Enemy_Spawner : MonoBehaviour
     private int _enemyCount = 0;  // Current number of spawned enemies
     public RuntimeAnimatorController animatorController; // Animator to set to all prefabs
     
+    
+    
+    [SerializeField] private AudioClip moveSound;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip attackSound;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,8 @@ public class Enemy_Spawner : MonoBehaviour
         
             // Add a NavMeshAgent component to the enemy
             NavMeshAgent agent = enemy.AddComponent<NavMeshAgent>();
+
+            agent.baseOffset = -0.07f;
             
             
             // Attach an array of scripts to the enemy
@@ -58,6 +66,14 @@ public class Enemy_Spawner : MonoBehaviour
             zombie.animator = animator;
             zombie.agent = agent;
             zombie.hand_R = enemy.transform.Find("Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R").gameObject;
+            
+            AudioSource audioSource = enemy.AddComponent<AudioSource>();
+            Zombie_Sound zombieSound = enemy.AddComponent<Zombie_Sound>();
+
+
+            zombieSound.moveSound = moveSound;
+            zombieSound.deathSound = deathSound;
+            zombieSound.attackSound = attackSound;
 
             _enemyCount++;
 
