@@ -10,7 +10,7 @@ public class walkingBackwards : MonoBehaviour
     
     private void Update()
     {
-        // Check if "W" key is pressed
+        // Check if "S" key is pressed
         if (Input.GetKey(KeyCode.S))
         {
             // Move character forward
