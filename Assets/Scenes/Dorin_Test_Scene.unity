@@ -313,7 +313,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1008,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7220615014242625708, guid: 9be76b3221aebef43a4e765ecda86bfe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7220615014242625710, guid: 9be76b3221aebef43a4e765ecda86bfe, type: 3}
       propertyPath: m_RootOrder
@@ -1077,7 +1077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4253083703926373165, guid: 8a60ccef966e9cb46b6693d76052b6a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4253083703926373165, guid: 8a60ccef966e9cb46b6693d76052b6a0, type: 3}
       propertyPath: m_TagString
