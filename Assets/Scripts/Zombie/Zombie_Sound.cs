@@ -21,7 +21,7 @@ public class Zombie_Sound : MonoBehaviour
         audioSource.spatialBlend = 1f; 
         audioSource.minDistance = 1f; 
         audioSource.maxDistance = 15f; 
-        audioSource.volume = 0.7f;
+        audioSource.volume = 0.5f;
 
     }
 

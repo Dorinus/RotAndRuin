@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_01.unity
     guid: 2ab5477e4cb134c49b6294c912daedc1
+  - enabled: 1
+    path: Assets/Scenes/Dorin_Test_Scene_2.unity
+    guid: c2e1a3b3ba305ad49bff13f24af14fce
   m_configObjects: {}
