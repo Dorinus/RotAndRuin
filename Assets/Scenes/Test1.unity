@@ -219,11 +219,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!95 &379034820 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95504181130280814, guid: 5d65c3bd98b79f84e996821ebfc0a190, type: 3}
-  m_PrefabInstance: {fileID: 925196350}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &379034824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +248,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
+--- !u!114 &379034827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379034814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6981eee4debe9bd40976fa318079cc58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &379034828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,12 +270,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 379034814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d359a8ff7d196e54fa73d1e156d533cb, type: 3}
+  m_Script: {fileID: 11500000, guid: dc894aeab948f724caf5c13e2b01ad48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backwardSpeed: 2
-  speed: 5
-  animator: {fileID: 379034820}
+  animator: {fileID: 0}
+--- !u!114 &379034829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379034814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba673da48895fc34786ca6913f20f246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!114 &379034832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379034814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74c89f08500a0a488ca8be9a7a1e3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &646392480
 GameObject:
   m_ObjectHideFlags: 0

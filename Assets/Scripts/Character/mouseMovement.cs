@@ -19,6 +19,7 @@ public class mouseMovement : MonoBehaviour
 
         transform.Rotate(Vector3.up, mouseX * rotationSpeed);
 
+        
         float forwardInput = Input.GetAxis("Vertical");
         float strafeInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * forwardInput * speed * Time.deltaTime);

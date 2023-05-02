@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class walking : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float speed = 5f; // Movement speed
-        public Animator animator; // Animator component reference
-    
-        private void Update()
+    public Animator animator;
+
+        void Start()
         {
+            animator = GetComponent<Animator>();
+        }
+        void Update()
+        {
+            //Forward Movement - Walking
             // Check if "W" key is pressed
             if (Input.GetKey(KeyCode.W))
             {
-                // Move character forward
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-    
                 // Play "walking" animation
                 animator.SetBool("isWalking", true);
             }
