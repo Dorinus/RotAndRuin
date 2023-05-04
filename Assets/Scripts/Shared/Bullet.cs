@@ -7,12 +7,6 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private int speed = 10;
 
-    private int timeToLive = 100;
-
-    private void Awake() {
-        Destroy(gameObject, timeToLive);
-    }
-
     public int Damage
     {
         get

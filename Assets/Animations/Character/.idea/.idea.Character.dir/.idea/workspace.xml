@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6956b91f-b9ae-4663-86e1-6f10eef81f25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Character.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Character.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkingBackwards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/walkingBackwards.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Packs/PolygonBattleRoyale/Scenes/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packs/PolygonBattleRoyale/Scenes/Demo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +19,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/mouseMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/walkingBackwards.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/walking.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/mouseMovement.cs" />
+      <option value="$PROJECT_DIR$/walkingBackwards.cs" />
+      <option value="$PROJECT_DIR$/characterMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2Ouvt7e8Ng2QGwGOncqDGrqxbI6" />
@@ -42,6 +51,7 @@
       <updated>1682423508685</updated>
       <workItem from="1682423520410" duration="1575000" />
       <workItem from="1682432789405" duration="75000" />
+      <workItem from="1682619125583" duration="2097000" />
     </task>
     <servers />
   </component>
