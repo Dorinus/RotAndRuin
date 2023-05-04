@@ -19,11 +19,12 @@ public class mouseMovement : MonoBehaviour
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+		transform.Rotate(Vector3.up, mouseX * rotationSpeed);
 		//TODO- VERTICAL MOUSE MOVEMENT
 /*
 		float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        transform.Rotate(Vector3.up, mouseX * rotationSpeed);
+        
 
 		verticalRotation += mouseY * rotationSpeed;
     	verticalRotation = Mathf.Clamp(verticalRotation, -verticalClampAngle, verticalClampAngle);
