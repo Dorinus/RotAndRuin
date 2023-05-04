@@ -17,6 +17,12 @@ public class Zombie_Sound : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        
+        audioSource.spatialBlend = 1f; 
+        audioSource.minDistance = 1f; 
+        audioSource.maxDistance = 15f; 
+        audioSource.volume = 0.5f;
+
     }
 
     IEnumerator PlaySound(AudioClip clip)
