@@ -10,25 +10,6 @@ public class rifleToggle : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Rifle Animations
-        //Character has rifle - Rifle Idle
-        //TODO - Temporary Solution until rifle logic is setup, use L to toggle rifle
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            bool hasRifle = animator.GetBool("hasRifle");
-			
-            //Set Rifle Idle Animation
-            animator.SetBool("hasRifle",!hasRifle);
-        }
-        /*else
-        {
-            animator.SetBool("hasRifle",false);
-        }
-*/
+		animator.SetBool("hasRifle",true);
     }
 }

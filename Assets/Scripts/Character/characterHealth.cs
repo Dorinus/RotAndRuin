@@ -61,7 +61,6 @@ public class characterHealth : MonoBehaviour
 
     private void LoadMainMenuDelayed()
     {
-        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Main_Menu");
     }
 }
