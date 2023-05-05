@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mouseMovement : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class mouseMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+	    Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()

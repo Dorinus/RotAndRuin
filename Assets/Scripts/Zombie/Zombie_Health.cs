@@ -21,7 +21,7 @@ public class Zombie_Health : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-            Debug.Log("Collision detected!");
+            //Debug.Log("Collision detected!");
 
             var bullet = other.gameObject.GetComponent<Bullet>();
             if (bullet != null)

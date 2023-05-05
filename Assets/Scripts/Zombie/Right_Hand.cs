@@ -28,13 +28,13 @@ public class Right_Hand : MonoBehaviour
     
     public void activateZombieAttack()
     {
-        Debug.Log("Activated!");
+        //Debug.Log("Activated!");
         hand_R.GetComponent<Collider>().enabled = true;
     }
     
     public void deactivateZombieAttack()
     {
-        Debug.Log("Deactivated!");
+        //Debug.Log("Deactivated!");
         hand_R.GetComponent<Collider>().enabled = false;
     }
 }
