@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#Lightning
+Assets/Scenes/Level_01/LightingData.asset
+Assets/Scenes/Level_02/LightingData.asset

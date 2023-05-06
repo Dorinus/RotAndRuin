@@ -18,7 +18,6 @@ public class Zombie : MonoBehaviour
     [SerializeField] private bool isDeathAnimationPlaying = false;
     [SerializeField] private GameObject _target;
 
-    [SerializeField] public GameObject hand_R;
 
     private void Awake()
     {

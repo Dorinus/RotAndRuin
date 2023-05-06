@@ -56,8 +56,6 @@ public class Enemy_Spawner : MonoBehaviour
             Zombie zombie = enemy.AddComponent<Zombie>();
             zombie.animator = animator;
             zombie.agent = agent;
-            zombie.hand_R = enemy.transform
-                .Find("Root/Hips/Spine_01/Spine_02/Spine_03/Clavicle_R/Shoulder_R/Elbow_R/Hand_R").gameObject;
 
             AudioSource audioSource = enemy.AddComponent<AudioSource>();
             Zombie_Sound zombieSound = enemy.AddComponent<Zombie_Sound>();
