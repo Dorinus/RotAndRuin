@@ -13,10 +13,13 @@ public class crossHairScript : MonoBehaviour
     }
 
     void Update () {
+		//Detect right mouse click
         if (Input.GetButton("Fire2")) {
+			//Activate crosshair
             crosshair.enabled = true;
         } else {
-            //crosshair.enabled = false;
+			//Deactivate crosshair
+            crosshair.enabled = false;
         }
     }
 }

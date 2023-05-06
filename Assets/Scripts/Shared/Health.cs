@@ -20,15 +20,11 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        Debug.Log("Collision detected!");
-
         var zombie_attack = other.gameObject.GetComponent<Zombie_Attack>();
         if (zombie_attack != null)
         {
             TakeDamage(zombie_attack.Damage);
         }
-        
     }
 
     private void TakeDamage(int damage)

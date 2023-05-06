@@ -16,7 +16,6 @@ public class characterHealth : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        
     }
     private void Awake()
     {
@@ -25,9 +24,6 @@ public class characterHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        //Debug.Log("Collision detected!");
-
         var zombie_attack = other.gameObject.GetComponent<Zombie_Attack>();
         if (zombie_attack != null)
         {
@@ -43,7 +39,9 @@ public class characterHealth : MonoBehaviour
         {
             isDeadCharacter = true;
             Die();
+			//Set animator to death animation
             animator.SetBool("isDeadCharacter", true);
+			//Load Main menu function after 1 second to give time to animator to see the new state
             Invoke("LoadMainMenu", 1f);
         }
     }
@@ -55,12 +53,15 @@ public class characterHealth : MonoBehaviour
     
     public void LoadMainMenu()
     {
+		//Set animator death state to false to prevent loop hell
         animator.SetBool("isDeadCharacter", false);
+		//Load Main menu after 5 seconds
         Invoke("LoadMainMenuDelayed", 5f);
     }
 
     private void LoadMainMenuDelayed()
     {
+		//Load main menu
         SceneManager.LoadScene("Main_Menu");
     }
 }
